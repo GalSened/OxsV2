@@ -14,7 +14,7 @@ describe('POST',()=>{
     it('post1', () => {
         const data ={
             email: `test${Math.floor(Math.random() * 9999 )}@gmail.com`,
-            name: 'lony',
+            name: 'lory',
             gender: 'male',
             status: 'inactive'
         }
