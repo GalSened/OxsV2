@@ -11,22 +11,20 @@ const TOKEN =
 
 describe('POST',()=>{
 
-    it('post1', (done) => {
-        const data ={}
+    it('post1', () => {
+        const data ={
+            email: `test${Math.floor(Math.random() * 9999 )}@gmail.com`,
+            name: 'lony',
+            gender: 'male',
+            status: 'inactive'
+        }
 
-        request.post('users').set("Authorization",`Bearer ${TOKEN}`).send(data).end((err,res)=>{
+        return request.post('users').set("Authorization",`Bearer ${TOKEN}`).send(data).then((res)=>{
             
-            done();
-            console.log(res.body);
+            
+            console.log(data.email);
+            console.log(res.body.data.email);
+            expect(res.body.data).deep.include(data);
         });
-        
-
-
     });
-
-
-
-
-
-
 });

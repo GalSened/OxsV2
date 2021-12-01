@@ -15,9 +15,9 @@ describe('GET', ()=>{
         });
     });
 
-    it('GET /users/:id', () => {
-        return request.get(`users/1access-token=${TOKEN}`).then((res)=>{
-            expect(res.body.data).to.not.be.empty
+    it('GET /users/:id',  () => {
+        request.get(`users/1access-token=${TOKEN}`).then(()=>{
+        expect(res.body.data).to.be.equal(1);
         });
     });
 
