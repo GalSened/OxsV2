@@ -26,11 +26,8 @@ describe('GET', ()=>{
 
         return request.get(url).then((res) => {
         expect(res.body.data).to.not.be.empty;
-        res.body.data.forEach((data) => {
-            expect(data.gender).to.eq('Female');
-            expect(data.status).to.eq('Active');
+        
         });   
-        });
-    });
+    });     
 
 });
