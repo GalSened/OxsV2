@@ -12,7 +12,7 @@ describe('PUT',()=>{
     it('PUT /users name &status', () => {
         const data = {
             status: 'active',
-            name: 'yanna',
+            name: 'Hanna',
         }
 
         return request

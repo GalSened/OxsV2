@@ -10,7 +10,7 @@ const TOKEN =
 
 
 describe('POST',()=>{
-
+    let UserId;
     it('post1', () => {
         const data ={
             email: `test${Math.floor(Math.random() * 9999 )}@gmail.com`,
@@ -25,6 +25,8 @@ describe('POST',()=>{
             console.log(data.email);
             console.log(res.body.data.email);
             expect(res.body.data).deep.include(data);
+            UserId=res.body.data.id;
+            console.log(UserId);
         });
     });
 });
