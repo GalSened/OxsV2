@@ -1,7 +1,7 @@
 import { describe } from "mocha";
 import supertest from "supertest";
 const request = supertest('https://gorest.co.in/public-api/')
-
+const faker = require ('faker');
 import { expect } from "chai";
 
 const TOKEN = 
@@ -16,13 +16,15 @@ describe('PUT',()=>{
         }
 
         return request
-            .put('users/132')
+            .put('users/1156')
             .set('authorization', `Bearer ${TOKEN}`)
             .send(data)
-            .then(res=>{
+            .then((res=>{
+                console.log(res.body);
                 expect(res.body.data.name).to.be.equal(data.name)
-            })
+            }));
 
+    
 
     });
 
