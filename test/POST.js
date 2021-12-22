@@ -27,5 +27,22 @@ console.log(data);
             UserId=res.body.data.id;
             console.log(UserId);
         });
+   
+    });
+
+    it('/posts', async() => {
+        const data= {
+            user_id: '4',
+            title: 'my title',
+            body: faker.lorem.paragraph()
+        }
+    
+        const res =  await request
+        .post('posts')
+        .set ("Authorization",`Bearer ${TOKEN}`)
+        .send(data);
+
+        console.log(res.body);
+    
     });
 });

@@ -13,7 +13,11 @@ describe('Negative Tests', () => {
             user_id: '1234',
             title: faker.lorem.sentence(), 
             body: faker.lorem.paragraph(),
-        }
+        };
+
+        const PostRes = request.post('posts').send(data);
+
+        expect(PostRes.body.data).to.deep.include(data);
 
 
     });
