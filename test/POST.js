@@ -1,13 +1,9 @@
-import { describe } from "mocha";
-import supertest from "supertest";
-const request = supertest('https://gorest.co.in/public-api/')
+import request from './config/common';
 const faker = require ('faker');
-import { expect } from "chai";
-import { name } from "faker";
-
 const TOKEN = 
     '4ef990d9537c541aef058b3a4421fd6d3fcdfcf881314fc13af0535ff1304158'
 
+import { expect } from "chai";
 
 
 describe('POST',()=>{
