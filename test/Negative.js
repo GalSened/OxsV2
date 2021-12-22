@@ -7,7 +7,7 @@ import { expect } from "chai";
 
 
 
-describe.only('Negative Tests', () => {
+describe('Negative Tests', () => {
     //send request without token
     it('401 Authentication failed', async() => {
         
