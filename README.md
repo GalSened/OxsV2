@@ -2,4 +2,6 @@
 
 
 for CI CD -  npm install
+
+->
 npm test -- --reporter mochawesome
