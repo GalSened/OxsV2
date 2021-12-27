@@ -1,15 +1,17 @@
 
 import request from './config/common';
 const faker = require ('faker');
-const TOKEN = 
-    '4ef990d9537c541aef058b3a4421fd6d3fcdfcf881314fc13af0535ff1304158'
+import Getoken from './Getoken.js';
+const TOKEN = Getoken.token;
+console.log(TOKEN);   
 
 import { expect } from "chai";
 
 describe('GET', ()=>{
-    it('GET /users', (done) => {
-        request.get(`users?access-token=${TOKEN}`).end((err,res)=>{
+    it('GET /loading collection table', (done) => {
+        request.get(`notes/getById/buildingId/600d9c9be45b0b1f9a002440/access-token=${TOKEN}`).end((err,res)=>{
             expect(res.status).to.be.equal(200);
+            
             done();
         });
     });

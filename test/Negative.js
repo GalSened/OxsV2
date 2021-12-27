@@ -1,7 +1,7 @@
 import request from './config/common';
 const faker = require ('faker');
-const TOKEN = 
-    '4ef990d9537c541aef058b3a4421fd6d3fcdfcf881314fc13af0535ff1304158'
+import Getoken from './Getoken.js';
+const TOKEN = Getoken.token;
 
 import { expect } from "chai";
 
@@ -25,7 +25,7 @@ describe('Negative Tests', () => {
 
     });
     //send request without body
-    it.only('422 Validation failed', async() => {
+    it('422 Validation failed', async() => {
         
         const data ={
             user_id: '1234',

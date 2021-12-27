@@ -1,4 +1,4 @@
 
 export default{
-    BaseURL: ('https://gorest.co.in/public-api/')
+    BaseURL: ('https://api.oxs.co.il/api/')
 }
